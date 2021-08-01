@@ -1,0 +1,8 @@
+Summarise_by_model.py is to summarise the content by model which is used in testing period. Since we have found the best models,
+it is recommended to directly use Summarise_avoid_OOV.py. 
+
+If you are interested to use out-of-sample data for text summarisation, please firstly change the root in line 535 of the Summarise_avoid_OOV.py. Additionally, if you had no reference summaries in your dataset, please modify the codes between 536 and 556.
+
+If there was no reference summaries in your dataset, please set the 'trg' config in line 555 to False.
+
+If your dataset have not been cleaned into lists of token indices, please set the 'idx' config in line 554 to False and the model will automatically clean the data for you, please ensure the input length is below 300 tokens, otherwise, please use data_cleaner.py. (auto-cleaning have not been tested since I have no out-of-sample data, you may try to clean your data with data_cleaner.py).

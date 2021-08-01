@@ -1,0 +1,30 @@
+Binary classification model is built for interest. It does not related to the project but can be used for other binary classification NLP tasks 
+(can be changed to multi-class classification if changing the loss function and hyperparameters).
+
+Additionally, since Transformer_Torch_with_gpu.py is written for non-gpu user, the root have not been changed and the codes tend to be less up-to-date.
+
+All the hyper-parameters are set as refined setting since this setting yields the best performance after experiments.
+If you are interested in changing the hyperparameters of the model, the instruction are shown as follow:
+
+Seq2Seq_Attention_final.py & Seq2Seq_Attention_final_train.py:
+Line 251 - 258 (256 256 512 512 0 0 for default setting)
+
+Traditional_Seq2Seq.py & Traditional_Seq2Seq_train.py:
+line 237 - 241 (256 256 512 0 0 for deault setting)
+
+Transformer_Torch_with_gpu_final.py & Transformer_Torch_with_gpu_final_train.py
+line 67 - 71
+
+If you want to try the model on a new dataset, please firstly clean the data by firstly following data_cleaner.py,
+Then change the root follow the instruction below:
+Seq2Seq_Attention:
+line 74
+
+Traditional_Seq2Seq:
+line 74
+
+Transformer:
+line 386
+***** please use the training file to change the roots!!! ********
+
+
